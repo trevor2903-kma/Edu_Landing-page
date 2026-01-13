@@ -1,27 +1,28 @@
 import * as React from "react";
+import { LogoCarousel } from "./LogoCarousel";
 
 const techLogos = [
   {
     src: "https://api.builder.io/api/v1/image/assets/ee2a763fd9c94431ab72b3d33157f442/f4100003eeec4d82bc756d98cd0b551483ef4285?placeholderIfAbsent=true",
-    alt: "Tech company partner 1"
+    alt: "Tech company partner 1",
   },
   {
     src: "https://api.builder.io/api/v1/image/assets/ee2a763fd9c94431ab72b3d33157f442/76a3b9c4f824ee449b58e92acc53c528d22e8699?placeholderIfAbsent=true",
-    alt: "Tech company partner 2"
+    alt: "Tech company partner 2",
   },
   {
     src: "https://api.builder.io/api/v1/image/assets/ee2a763fd9c94431ab72b3d33157f442/ee37e1244b3d938ab1d99736b6c8eeff818d8e89?placeholderIfAbsent=true",
     alt: "Tech company partner 3",
-    hasOverlay: true
+    hasOverlay: true,
   },
   {
     src: "https://api.builder.io/api/v1/image/assets/ee2a763fd9c94431ab72b3d33157f442/2471a861fc3b4a69d61e957ac5df3742432cab3f?placeholderIfAbsent=true",
-    alt: "Tech company partner 4"
+    alt: "Tech company partner 4",
   },
   {
     src: "https://api.builder.io/api/v1/image/assets/ee2a763fd9c94431ab72b3d33157f442/4a61efbc4d4e90c6722b7a32834e1ce21420001e?placeholderIfAbsent=true",
-    alt: "Tech company partner 5"
-  }
+    alt: "Tech company partner 5",
+  },
 ];
 
 export function TechPartners() {
@@ -32,29 +33,8 @@ export function TechPartners() {
           Đối tác công ty công nghệ
         </h2>
       </header>
-      <div className="flex flex-wrap gap-12 content-start items-start mt-6 w-full max-md:max-w-full">
-        <div className="flex flex-wrap flex-1 shrink gap-4 justify-center items-center w-full basis-0 min-w-60 max-md:max-w-full">
-          {techLogos.map((logo, index) => (
-            <div key={index} className="flex relative flex-col gap-5 items-center self-stretch my-auto aspect-[2.558] w-[220px]">
-              {logo.hasOverlay ? (
-                <>
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="object-cover absolute inset-0 size-full"
-                  />
-                  <div className="flex relative self-stretch my-auto min-h-[86px] min-w-60 w-[275px]" />
-                </>
-              ) : (
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="object-contain shrink-0 gap-5 self-stretch my-auto aspect-[2.56] w-[220px]"
-                />
-              )}
-            </div>
-          ))}
-        </div>
+      <div className="mt-6 w-full max-md:max-w-full">
+        <LogoCarousel logos={techLogos} />
       </div>
     </section>
   );
