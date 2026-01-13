@@ -26,7 +26,7 @@ export default function Header() {
 
         {/* Right Section: Search & Auth */}
         <div className="flex items-center gap-x-6">
-          <div className="flex items-center sm:hidden lg:flex relative">
+          <div className="items-center hidden lg:flex relative">
             <SearchInput />
           </div>
 

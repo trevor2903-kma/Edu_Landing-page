@@ -16,7 +16,7 @@ export default function HeroContent() {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
             href="#"
-            className="rounded-md bg-primary-500 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+            className="rounded-md bg-primary-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 transition-colors duration-150"
           >
             Bắt đầu ngay!
           </Link>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { MethodologyHeader } from "./MethodologyHeader";
 import { FeatureBlock } from "./FeatureBlock";
+import MethodDescription from "./MethodDescription";
 
 export function Methodology() {
   const features = [
@@ -35,32 +36,36 @@ export function Methodology() {
   ];
 
   return (
-    <section className="box-border flex flex-col gap-16 items-center px-0 py-24 w-full bg-sky-50 max-md:gap-12 max-md:px-0 max-md:py-16 max-sm:gap-8 max-sm:px-0 max-sm:py-12">
-      <div className="box-border flex flex-col gap-8 items-center px-8 py-0 mx-auto w-full max-w-screen-xl max-md:gap-6 max-md:px-6 max-md:py-0 max-md:max-w-[991px] max-sm:gap-5 max-sm:px-4 max-sm:py-0 max-sm:max-w-screen-sm">
-        <MethodologyHeader />
-      </div>
-
-      <div className="box-border flex justify-center items-center px-8 py-0 w-full max-w-[1440px] max-md:px-6 max-md:py-0 max-sm:px-4 max-sm:py-0">
-        <div className="box-border relative w-full h-[670px] max-w-[1259px] max-md:h-auto max-md:min-h-[600px] max-sm:flex max-sm:relative max-sm:flex-col max-sm:h-auto max-sm:min-h-[900px]">
-          {features.map((feature, index) => (
-            <FeatureBlock
-              key={index}
-              title={feature.title}
-              description={feature.description}
-              alignment={feature.alignment}
-              position={feature.position}
-              className={feature.className}
-            />
-          ))}
-
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/e1bd2858565f48d078f8f30ee567ba855a582ddb?width=1380"
-            alt="Group 1041"
-            className="object-contain absolute top-0 left-2/4 -translate-x-2/4 h-[670px] w-[690px] max-md:h-auto max-md:max-h-[500px] max-md:w-[500px] max-sm:relative max-sm:left-2/4 max-sm:order-2 max-sm:mx-0 max-sm:my-6 max-sm:w-full max-sm:h-auto max-sm:-translate-x-2/4 max-sm:max-w-[350px]"
-          />
+    <>
+      <section className="box-border flex flex-col gap-16 items-center px-0 py-24 w-full bg-sky-50 max-md:gap-12 max-md:px-0 max-md:py-16 max-sm:gap-8 max-sm:px-0 max-sm:py-12">
+        <div className="box-border flex flex-col gap-8 items-center px-8 py-0 mx-auto w-full max-w-screen-xl max-md:gap-6 max-md:px-6 max-md:py-0 max-md:max-w-[991px] max-sm:gap-5 max-sm:px-4 max-sm:py-0 max-sm:max-w-screen-sm">
+          <MethodologyHeader />
         </div>
-      </div>
-    </section>
+  
+        <div className="box-border flex justify-center items-center px-8 py-0 w-full max-w-[1440px] max-md:px-6 max-md:py-0 max-sm:px-4 max-sm:py-0">
+          <div className="box-border relative w-full h-[670px] max-w-[1259px] max-md:h-auto max-md:min-h-[600px] max-sm:flex max-sm:relative max-sm:flex-col max-sm:h-auto max-sm:min-h-[900px]">
+            {features.map((feature, index) => (
+              <FeatureBlock
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                alignment={feature.alignment}
+                position={feature.position}
+                className={feature.className}
+              />
+            ))}
+  
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e1bd2858565f48d078f8f30ee567ba855a582ddb?width=1380"
+              alt="Group 1041"
+              className="object-contain absolute top-0 left-2/4 -translate-x-2/4 h-[670px] w-[690px] max-md:h-auto max-md:max-h-[500px] max-md:w-[500px] max-sm:relative max-sm:left-2/4 max-sm:order-2 max-sm:mx-0 max-sm:my-6 max-sm:w-full max-sm:h-auto max-sm:-translate-x-2/4 max-sm:max-w-[350px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <MethodDescription />
+    </>
   );
 }
 
