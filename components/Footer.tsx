@@ -1,116 +1,183 @@
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Facebook } from "lucide-react";
 
 const navigation = {
-  solutions: [
-    { name: 'Khóa học', href: '#' },
-    { name: 'Mentors', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Sự kiện', href: '#' },
-  ],
-  support: [
-    { name: 'Hỗ trợ', href: '#' },
-    { name: 'Chính sách', href: '#' },
-    { name: 'Điều khoản', href: '#' },
+  courses: [
+    { name: "Lộ trình Sự nghiệp", href: "#" },
+    { name: "Lộ trình Kỹ năng", href: "#" },
+    { name: "Lộ trình SCI", href: "#" },
+    { name: "Khoá học", href: "#" },
+    { name: "Dự án", href: "#" },
   ],
   company: [
-    { name: 'Về chúng tôi', href: '#' },
-    { name: 'Tuyển dụng', href: '#' },
-    { name: 'Liên hệ', href: '#' },
+    { name: "Về chúng tôi", href: "#" },
+    { name: "Liên hệ", href: "#" },
   ],
+  legal: [{ name: "Điều khoản & Điều kiện", href: "#" }],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: "LinkedIn",
+      href: "#",
+      icon: Linkedin,
+    },
+    {
+      name: "Facebook",
+      href: "#",
       icon: Facebook,
     },
-    {
-      name: 'Instagram',
-      href: '#',
-      icon: Instagram,
-    },
-    {
-      name: 'YouTube',
-      href: '#',
-      icon: Youtube,
-    },
   ],
-}
+};
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer
+      className="bg-[#0072BC] border-t border-white/100"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-             <Link href="/" className="text-2xl font-bold text-white">
-                ON SCHOOL
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="space-y-4 col-span-2">
+            <div className="flex flex-col items-start gap-2">
+              <Link href="/" className="flex items-center gap-2">
+                <div className="text-white font-bold text-2xl flex flex-col items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="32"
+                    viewBox="0 0 48 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M0 27.7012V27.6812C0 26.6656 0.359331 25.8106 1.08946 25.1065C1.81959 24.3925 2.73448 24.041 3.83414 24.041C4.93379 24.041 5.84869 24.3924 6.57882 25.0966C7.28856 25.7907 7.64916 26.6444 7.64916 27.66V27.68C7.64916 28.6956 7.28856 29.5493 6.56862 30.2547C5.82957 30.9675 4.91341 31.3202 3.81375 31.3202C2.7141 31.3202 1.80812 30.9688 1.07799 30.2646C0.359331 29.5705 0 28.7168 0 27.7012ZM5.99267 27.7012V27.6812C5.99267 27.0681 5.78752 26.5447 5.38614 26.1222C4.96565 25.6898 4.44067 25.4692 3.81375 25.4692C3.18683 25.4692 2.66185 25.6798 2.26175 26.1122C1.85909 26.5247 1.65522 27.0469 1.65522 27.66V27.68C1.65522 28.2931 1.86037 28.8153 2.27067 29.2378C2.68224 29.6702 3.20722 29.8908 3.83414 29.8908C4.46106 29.8908 4.98476 29.6802 5.39634 29.2477C5.79772 28.8352 5.99267 28.3118 5.99267 27.6987"
+                      fill="white"
+                    />
+                    <path
+                      d="M8.8877 25.8106H10.4512V26.5758C10.9137 26.0026 11.4489 25.7109 12.0656 25.7109C12.6823 25.7109 13.113 25.8916 13.443 26.2443C13.7718 26.5958 13.9374 27.088 13.9374 27.7124V31.2005H13.192C12.7397 31.2005 12.374 30.8429 12.374 30.4017V28.1947C12.374 27.4606 12.0554 27.098 11.4272 27.098C10.799 27.098 10.4512 27.4606 10.4512 28.1947V31.2005H8.8877V25.8106Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M15.5266 29.4803C16.1331 29.9128 16.7091 30.1246 17.2659 30.1246C17.7068 30.1246 17.9221 29.9938 17.9221 29.7221V29.7022C17.9221 29.5514 17.8087 29.4305 17.5845 29.3308C17.5016 29.2996 17.234 29.2087 16.7817 29.0791C15.682 28.7675 15.1367 28.2242 15.1367 27.4602V27.4403C15.1367 26.9069 15.3329 26.4844 15.733 26.1729C16.1025 25.8813 16.5753 25.7305 17.1512 25.7305C17.8928 25.7305 18.5809 25.9411 19.2078 26.3536L18.6115 27.4091C18.0241 27.0776 17.5309 26.9069 17.1194 26.9069C16.7396 26.9069 16.546 27.0278 16.546 27.2783V27.2995C16.546 27.4303 16.6581 27.5512 16.8836 27.6609C16.9766 27.7007 17.2328 27.7917 17.666 27.9425C18.1693 28.1145 18.549 28.2852 18.7848 28.4659C19.1454 28.7476 19.3301 29.1102 19.3301 29.5414V29.5614C19.3301 30.1346 19.125 30.577 18.7236 30.8786C18.3541 31.1602 17.8495 31.3011 17.2238 31.3011C16.3497 31.3011 15.5674 31.0294 14.8589 30.486L15.5266 29.4803Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M20.181 28.5347V28.5147C20.181 27.7408 20.4473 27.0766 20.9926 26.5345C21.5482 25.9811 22.2376 25.7095 23.0696 25.7095C23.9845 25.7095 24.7248 26.0111 25.2689 26.6155L24.3133 27.6199C23.9335 27.2286 23.5118 27.0267 23.0594 27.0267C22.6797 27.0267 22.3586 27.1676 22.1025 27.4604C21.8451 27.7508 21.7228 28.0935 21.7228 28.4948V28.516C21.7228 28.9384 21.8464 29.2899 22.1025 29.5715C22.3586 29.8631 22.6988 30.0039 23.1193 30.0039C23.5398 30.0039 23.9731 29.8133 24.3846 29.4307L25.2995 30.3354C24.693 30.9897 23.9425 31.3212 23.048 31.3212C22.2248 31.3212 21.5367 31.0495 20.9914 30.5074C20.446 29.974 20.1797 29.311 20.1797 28.5359"
+                      fill="white"
+                    />
+                    <path
+                      d="M26.3179 23.8589H27.8801V26.5744C28.3426 26.0011 28.8765 25.7095 29.4932 25.7095C30.11 25.7095 30.5432 25.8902 30.8719 26.2429C31.1994 26.5943 31.3651 27.0866 31.3651 27.711V31.2004H30.6184C30.1673 31.2004 29.8016 30.8427 29.8016 30.4015V28.1945C29.8016 27.4605 29.483 27.0978 28.8561 27.0978C28.2292 27.0978 27.8801 27.4605 27.8801 28.1945V31.2016H26.3179V23.8614V23.8589Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M32.4507 28.5347V28.5147C32.4507 27.7308 32.7387 27.0666 33.3057 26.5345C33.8804 25.9811 34.5888 25.7095 35.4426 25.7095C36.2963 25.7095 37.006 25.9811 37.5705 26.5245C38.135 27.0566 38.414 27.7209 38.414 28.4948V28.516C38.414 29.2998 38.1273 29.9641 37.5603 30.4962C36.9856 31.0483 36.2759 31.3212 35.4234 31.3212C34.571 31.3212 33.86 31.0495 33.2955 30.5074C32.7285 29.974 32.4507 29.311 32.4507 28.5359M36.871 28.5347V28.5147C36.871 28.1022 36.7384 27.7608 36.4709 27.4691C36.1931 27.1775 35.8439 27.0267 35.4234 27.0267C35.003 27.0267 34.6411 27.1676 34.3748 27.4604C34.1174 27.7308 33.9938 28.0823 33.9938 28.4948V28.516C33.9938 28.9285 34.1276 29.2699 34.3951 29.5615C34.6717 29.8532 35.0221 30.0039 35.4426 30.0039C35.8631 30.0039 36.2237 29.8631 36.4925 29.5715C36.7486 29.2986 36.8722 28.9484 36.8722 28.5359"
+                      fill="white"
+                    />
+                    <path
+                      d="M39.2739 28.5347V28.5147C39.2739 27.7308 39.5606 27.0666 40.1264 26.5345C40.7023 25.9811 41.4121 25.7095 42.2658 25.7095C43.1195 25.7095 43.8267 25.9811 44.3938 26.5245C44.9582 27.0566 45.236 27.7209 45.236 28.4948V28.516C45.236 29.2998 44.9468 29.9641 44.3823 30.4962C43.8063 31.0483 43.0966 31.3212 42.2441 31.3212C41.3917 31.3212 40.6819 31.0495 40.1162 30.5074C39.5517 29.974 39.2739 29.311 39.2739 28.5359M43.6942 28.5347V28.5147C43.6942 28.1022 43.5591 27.7608 43.2928 27.4691C43.015 27.1775 42.6659 27.0267 42.2441 27.0267C41.8224 27.0267 41.4618 27.1676 41.1967 27.4604C40.9393 27.7308 40.817 28.0823 40.817 28.4948V28.516C40.817 28.9285 40.9508 29.2699 41.2184 29.5615C41.4949 29.8532 41.844 30.0039 42.2671 30.0039C42.6901 30.0039 43.0494 29.8631 43.3145 29.5715C43.5719 29.2986 43.6955 28.9484 43.6955 28.5359"
+                      fill="white"
+                    />
+                    <path
+                      d="M46.4351 23.8589H47.9998V31.1991H47.2467C46.7995 31.1991 46.4351 30.844 46.4351 30.4065V23.8589Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M39.7891 9.66568L35.7728 12.2229V12.2204C30.7906 8.42071 25.4541 5.1282 19.7979 2.36533L23.9085 0.276661L24.4564 0C29.4756 2.52484 34.231 5.48088 38.6755 8.81452C39.0488 9.09616 39.4196 9.37905 39.7866 9.66444C39.7891 9.66444 39.7891 9.66568 39.7891 9.66568Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M33.8548 13.4432L33.2317 13.8395H33.2292L31.8925 14.6919L31.3777 15.0184L30.5546 15.5431L29.9136 15.9506L29.883 15.9693L29.827 16.0054C29.8104 15.993 29.7938 15.9817 29.7773 15.9693C29.5836 15.8247 29.3899 15.6814 29.1924 15.5418C28.7974 15.2527 28.4011 14.9698 28.001 14.6907C27.7016 14.4776 27.3996 14.2694 27.095 14.0626C26.988 13.9878 26.8797 13.9118 26.7701 13.8382C26.5586 13.6962 26.3458 13.5504 26.1317 13.4108C25.9177 13.2662 25.7049 13.1254 25.4895 12.9858C25.0512 12.6967 24.6116 12.4113 24.1669 12.1322C23.7133 11.8443 23.2571 11.5614 22.7996 11.2847C22.7996 11.2847 22.7984 11.2835 22.7958 11.281C22.3231 10.9931 21.8491 10.7102 21.37 10.4298C20.8615 10.132 20.3519 9.83912 19.8383 9.55374C18.0047 8.52311 16.1342 7.55355 14.2241 6.64381C13.7348 6.40828 13.2391 6.17648 12.7422 5.94967L13.5169 5.55462L13.5934 5.51474L13.8011 5.41005L14.2241 5.1957V5.19321L17.1039 3.73264L17.4288 3.56689C19.2522 4.42429 21.0425 5.33777 22.7996 6.30609C24.6549 7.32674 26.4732 8.40971 28.2508 9.55249C28.698 9.83912 29.144 10.1295 29.5887 10.4286C29.9162 10.6442 30.2436 10.8648 30.5686 11.0903C30.5813 11.0953 30.5915 11.1028 30.603 11.1128C30.6833 11.1676 30.7648 11.2212 30.8451 11.2798C31.0222 11.4006 31.1993 11.5215 31.3764 11.6499C31.6045 11.8069 31.8339 11.9677 32.0607 12.1309C32.4544 12.4113 32.8469 12.6955 33.2368 12.9846C33.4292 13.1242 33.6216 13.2662 33.8115 13.4095C33.8255 13.4195 33.8382 13.4307 33.8522 13.4395L33.8548 13.4432Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M27.8994 17.2353L23.8664 19.8012C23.1414 19.2828 22.4075 18.7756 21.6684 18.2796H14.1543V13.7122C11.4848 12.2504 8.73632 10.9157 5.91391 9.70436L5.60938 9.57351L10.2119 7.23809L10.3304 7.17578H10.3329C16.5779 9.90874 22.4623 13.291 27.8994 17.2353Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
               </Link>
-            <p className="text-sm leading-6 text-gray-300">
-              Nền tảng học tập trực tuyến hàng đầu Việt Nam. Nâng tầm tri thức, kiến tạo tương lai.
+            </div>
+            <p className="text-base leading-6 text-white text-opacity-80">
+              Mở khóa kỹ năng - Nâng tầm sự nghiệp
             </p>
-            <div className="flex space-x-6">
+          </div>
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 col-span-1 lg:col-span-3">
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white text-opacity-70">
+                Khoá học
+              </h3>
+              <ul role="list" className="mt-4 space-y-3">
+                {navigation.courses.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-white font-medium hover:text-opacity-80"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white text-opacity-70">
+                Công ty
+              </h3>
+              <ul role="list" className="mt-4 space-y-3">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-white font-medium hover:text-opacity-80"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white text-opacity-70">
+                Pháp lý
+              </h3>
+              <ul role="list" className="mt-4 space-y-3">
+                {navigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-white font-medium hover:text-opacity-80"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-4">
+            <p className="text-sm leading-5 text-primary-200">
+              &copy; 2024 Onschool. All rights reserved.
+            </p>
+            <div className="flex gap-4">
               {navigation.social.map((item) => (
-                <Link key={item.name} href={item.href} className="text-gray-400 hover:text-white">
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-white hover:text-opacity-80"
+                >
+                  <item.icon className="h-5 w-5" />
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Khám phá</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Hỗ trợ</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-1 md:gap-8">
-               <div>
-                  <h3 className="text-sm font-semibold leading-6 text-white">Liên hệ</h3>
-                   <ul role="list" className="mt-6 space-y-4 text-sm leading-6 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" />
-                      123 Đường ABC, Quận XYZ, TP.HCM
-                    </li>
-                    <li className="flex items-center gap-2">
-                       <Phone className="h-4 w-4" />
-                       +84 123 456 789
-                    </li>
-                    <li className="flex items-center gap-2">
-                       <Mail className="h-4 w-4" />
-                       contact@onschool.vn
-                    </li>
-                   </ul>
-               </div>
-            </div>
+
+          <div className="text-sm leading-5 text-white text-opacity-80">
+            Hotline: +84 865 341 018
           </div>
-        </div>
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">&copy; 2024 OnSchool, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
