@@ -74,7 +74,7 @@ export const CourseMetadata: React.FC<CourseMetadataProps> = ({
 
       <div className="flex justify-between items-center self-stretch bottom-[row]">
         <MetadataRow icon="chart" text={level} />
-        <MetadataRow icon="clock" text={duration} align="right" width="w-10" />
+        <MetadataRow icon="clock" text={duration} align="left" width="w-11" />
       </div>
     </div>
   );

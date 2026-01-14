@@ -15,7 +15,7 @@ export default function AuthButtons({ className }: AuthButtonsProps) {
       </Link>
       <Link
         href="#"
-        className="rounded-md bg-primary-600 px-4 py-2 text-base font-semibold text-white shadow-sm hover:bg-primary-500 whitespace-nowrap transition-colors duration-150 ease-in-out"
+        className="rounded-md bg-primary-500 px-4 py-2 text-base font-semibold text-white shadow-sm hover:bg-primary-400 whitespace-nowrap transition-colors duration-150 ease-in-out"
       >
         Đăng ký
       </Link>
