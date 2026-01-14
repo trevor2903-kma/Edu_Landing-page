@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CoursesHeader from "./popular-courses-header/CouresHeader";
 
 export default function PopularCourses() {
   const courses = [
@@ -12,7 +13,7 @@ export default function PopularCourses() {
     {
       id: 2,
       title: "ReactJS Advanced",
-      description: "Nắm vững React, Hooks, Redux và Next.js.",
+      description: `Nắm vững React, Hooks, Redux và Next.js.`,
       price: "2.500.000đ",
       image: "bg-indigo-200",
     },
@@ -28,12 +29,7 @@ export default function PopularCourses() {
   return (
     <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Khóa học phổ biến</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-             Cập nhật những kỹ năng mới nhất với các khóa học được yêu thích nhất.
-          </p>
-        </div>
+        <CoursesHeader />
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {courses.map((course) => (
             <article key={course.id} className="flex flex-col items-start justify-between bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">

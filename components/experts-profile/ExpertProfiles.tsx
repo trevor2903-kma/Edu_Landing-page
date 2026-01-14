@@ -83,9 +83,6 @@ function ExpertProfiles() {
                 key={testimonial.id}
                 backgroundImage={testimonial.backgroundImage}
                 name={testimonial.name}
-                experience={testimonial.experience}
-                position={testimonial.position}
-                starImages={testimonial.starImages}
               />
             ))}
           </div>
