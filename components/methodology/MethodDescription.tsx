@@ -2,7 +2,6 @@
 import * as React from "react";
 import ProjectBasedLearning from "./project-based/ProjectBasedLearning";
 import GuideSelfPractice from "./self-practice/GuideSelfPractice";
-// import MethodFeature from "./MethodFeature";
 
 function MethodDescription() {
   return (
