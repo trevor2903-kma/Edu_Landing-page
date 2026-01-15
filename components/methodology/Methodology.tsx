@@ -37,7 +37,7 @@ export function Methodology() {
 
   return (
     <>
-      <section className="box-border flex flex-col gap-16 items-center px-0 py-24 w-full bg-sky-50 max-md:gap-12 max-md:px-0 max-md:py-16 max-sm:gap-8 max-sm:px-0 max-sm:py-12">
+      <section className="box-border flex flex-col gap-16 items-center px-0 py-24 w-full bg-white max-md:gap-12 max-md:px-0 max-md:py-16 max-sm:gap-8 max-sm:px-0 max-sm:py-12">
         <div className="box-border flex flex-col gap-8 items-center px-8 py-0 mx-auto w-full max-w-screen-xl max-md:gap-6 max-md:px-6 max-md:py-0 max-md:max-w-[991px] max-sm:gap-5 max-sm:px-4 max-sm:py-0 max-sm:max-w-screen-sm">
           <MethodologyHeader />
         </div>
