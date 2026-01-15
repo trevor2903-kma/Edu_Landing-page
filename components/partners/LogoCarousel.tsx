@@ -45,7 +45,7 @@ export function LogoCarousel({ logos, className = "", dots }: LogoCarouselProps)
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },

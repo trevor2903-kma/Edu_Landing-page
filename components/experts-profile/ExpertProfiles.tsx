@@ -57,7 +57,7 @@ function ExpertProfiles() {
   };
 
   return (
-    <section className="flex overflow-hidden flex-col gap-16 justify-center items-center px-0 py-24 bg-gray-50">
+    <section className="flex overflow-hidden flex-col gap-16 justify-center items-center px-0 py-24 max-sm:py-16 bg-gray-50">
       <div className="gap-16 px-8 py-0 w-full max-w-screen-xl max-md:px-5 max-md:max-w-full">
         <header className="flex flex-wrap gap-8 gap-y-8 justify-between content-start items-start w-full font-semibold max-md:max-w-full">
           <div className="flex-1 shrink gap-5 max-w-screen-md text-4xl tracking-tighter leading-10 text-gray-900 basis-0 min-w-[480px] max-md:max-w-full">
