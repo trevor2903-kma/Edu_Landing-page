@@ -25,6 +25,7 @@ interface TriangleDecorationsProps {
   width: string;
   height: string;
   gap: string;
+  className: string;
 }
 
 export const TriangleDecorations: React.FC<TriangleDecorationsProps> = ({
@@ -35,10 +36,11 @@ export const TriangleDecorations: React.FC<TriangleDecorationsProps> = ({
   width,
   height,
   gap,
+  className,
 }) => {
   return (
     <div
-      className={`inline-flex rotate-12 absolute ${top} ${right} ${left} ${bottom} flex-col ${gap} items-start h-[182px] w-[182px] z-[4] max-md:top-2.5 max-md:right-2.5 max-sm:gap-2.5 max-sm:h-[120px] max-sm:right-[5px] max-sm:top-[5px] max-sm:w-[120px]`}
+      className={`inline-flex rotate-12 absolute ${top} ${right} ${left} ${bottom} flex-col ${gap} items-start h-[182px] w-[182px] z-[4] max-md:top-2.5 max-md:right-2.5 max-sm:gap-2.5 max-sm:h-[120px] max-sm:right-[5px] max-sm:top-[20px] max-sm:z-10 max-sm:w-[120px] ${className}`}
     >
       <TriangleIconRow count={6} height={height} width={width} gap={gap} />
       <TriangleIconRow count={6} height={height} width={width} gap={gap} />

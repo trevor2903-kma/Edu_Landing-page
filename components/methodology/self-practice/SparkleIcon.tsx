@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function SparkleIcon() {
   return (
-    <div className="absolute h-[84px] left-[476px] top-[39px] w-[84px] max-md:h-[67px] max-md:left-[380px] max-md:top-[30px] max-md:w-[67px] max-sm:top-5 max-sm:left-auto max-sm:w-14 max-sm:h-14 max-sm:right-[15px]">
+    <div className="absolute h-[84px] left-[476px] top-[39px] w-[84px] max-md:h-[67px] max-md:left-[380px] max-md:top-[30px] max-md:w-[67px] max-sm:top-5 max-sm:left-auto max-sm:w-12 max-sm:h-12 max-sm:right-[105px] sm:top-[8px] ">
       <div>
         <svg
           width="84"
@@ -15,14 +15,14 @@ export function SparkleIcon() {
           <circle cx="42" cy="42" r="42" fill="#0C9AEB" />
         </svg>
       </div>
-      <div className="absolute left-[21px] top-[21px] w-[42px] h-[42px]">
+      <div className="absolute left-[21px] top-[21px] w-[42px] h-[42px] max-sm:left-[6px] max-sm:top-[8px] sm:left-[12px] sm:top-[12px]">
         <svg
           width="42"
           height="42"
           viewBox="0 0 42 42"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
+          className="w-full h-full max-sm:w-9 max-sm:h-9"
         >
           <path
             d="M17.1731 27.8317L15.75 32.8125L14.3269 27.8317C13.5794 25.2155 11.5345 23.1706 8.91833 22.4231L3.9375 21L8.91833 19.5769C11.5345 18.8294 13.5794 16.7845 14.3269 14.1683L15.75 9.1875L17.1731 14.1683C17.9206 16.7845 19.9655 18.8294 22.5817 19.5769L27.5625 21L22.5817 22.4231C19.9655 23.1706 17.9206 25.2155 17.1731 27.8317Z"
