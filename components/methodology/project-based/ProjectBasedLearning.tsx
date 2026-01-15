@@ -29,7 +29,7 @@ export const ProjectBasedLearning: React.FC = () => {
         </div>
 
         <aside className="flex relative shrink-0 justify-center items-center w-[529px] max-md:w-full max-md:max-w-[529px] max-sm:w-full max-sm:max-w-full">
-          <div className="absolute  md:rotate-[300deg] left-1 top-[28px] w-[280px] h-[300px] z-[2]">
+          <div className="absolute md:-top-[calc(20%-30px)] md:left-[5px] -left-[10px] max-md:top-[28px] max-md:w-[230px] max-md:h-[230px] z-[2]">
             <svg
               width="310"
               height="374"

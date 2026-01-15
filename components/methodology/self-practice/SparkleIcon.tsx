@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function SparkleIcon() {
   return (
-    <div className="absolute h-[84px] left-[476px] top-[39px] w-[84px] max-md:h-[67px] max-md:left-[380px] max-md:top-[30px] max-md:w-[67px] max-sm:top-5 max-sm:left-auto max-sm:w-12 max-sm:h-12 max-sm:right-[105px] sm:top-[8px] ">
+    <div className="absolute h-[84px] left-[476px] top-[39px] w-[84px] max-md:h-[67px] max-md:left-[380px] max-md:top-[30px] max-md:w-[67px] max-sm:top-5 max-sm:left-auto max-sm:w-12 max-sm:h-12 max-sm:right-[30px] md:top-[30px] md:left-[490px] ">
       <div>
         <svg
           width="84"
@@ -15,7 +15,7 @@ export function SparkleIcon() {
           <circle cx="42" cy="42" r="42" fill="#0C9AEB" />
         </svg>
       </div>
-      <div className="absolute left-[21px] top-[21px] w-[42px] h-[42px] max-sm:left-[6px] max-sm:top-[8px] sm:left-[12px] sm:top-[12px]">
+      <div className="absolute left-[21px] top-[21px] w-[42px] h-[42px] max-sm:left-[6px] max-sm:top-[8px] md:left-[20px] md:top-[20px]">
         <svg
           width="42"
           height="42"
