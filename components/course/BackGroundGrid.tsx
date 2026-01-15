@@ -4,9 +4,13 @@ interface BackGroundGridProps {
   className?: string;
 }
 
-export const BackGroundGrid: React.FC<BackGroundGridProps> = ({ className="" }) => {
+export const BackGroundGrid: React.FC<BackGroundGridProps> = ({
+  className = "",
+}) => {
   return (
-    <div className={`absolute top-0 ${className} opacity-40 pointer-events-none h-full min-h-[1440px] w-[1920px] max-md:min-h-[1080px] max-md:w-[1440px] max-sm:-translate-x-2/4 max-sm:min-h-[720px] max-sm:w-[960px]`}>
+    <div
+      className={`absolute top-0 left-1/2 -translate-x-1/2 ${className} opacity-40 pointer-events-none h-full min-h-[1440px] w-[1920px] max-md:min-h-[1080px] max-md:w-[1440px] max-sm:min-h-[720px] max-sm:w-[960px]`}
+    >
       <div className="flex absolute top-0 left-60 justify-center items-center h-[1440px] w-[1440px] max-md:h-[1080px] max-md:left-[180px] max-md:w-[1080px] max-sm:h-[720px] max-sm:left-[120px] max-sm:w-[720px]">
         <div className="absolute top-0 left-0 shrink-0 h-[1440px] w-[1440px] max-md:h-[1080px] max-md:w-[1080px] max-sm:h-[720px] max-sm:w-[720px]" />
       </div>

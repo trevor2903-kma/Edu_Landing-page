@@ -14,11 +14,12 @@ interface LogoItem {
 interface LogoCarouselProps {
   logos: LogoItem[];
   className?: string;
+  dots: boolean;
 }
 
-export function LogoCarousel({ logos, className = "" }: LogoCarouselProps) {
+export function LogoCarousel({ logos, className = "", dots }: LogoCarouselProps) {
   const settings = {
-    dots: true,
+    dots: dots,
     infinite: true,
     speed: 1000,
     slidesToShow: 4,

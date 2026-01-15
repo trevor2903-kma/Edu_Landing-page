@@ -30,14 +30,14 @@ const universityLogos = [
 export function UniversityPartners() {
   return (
     <section className="gap-6 w-full max-md:max-w-full">
-      <header className="flex flex-col items-start w-full text-3xl font-semibold tracking-tight leading-none text-center text-gray-900 max-md:max-w-full">
+      <header className="flex flex-col sm:items-start max-sm:items-center w-full text-3xl font-semibold tracking-tight leading-none text-center text-gray-900 max-md:max-w-full">
         <h2 className="text-3xl leading-10 text-gray-900 max-md:max-w-full">
           Đối tác trường đại học
         </h2>
       </header>
       <div className="flex flex-col mt-6 w-full max-md:max-w-full">
         <div className="flex flex-wrap gap-4 content-start items-start w-full max-md:max-w-full">
-          <LogoCarousel logos={universityLogos} />
+          <LogoCarousel logos={universityLogos} dots={true} />
         </div>
       </div>
     </section>
