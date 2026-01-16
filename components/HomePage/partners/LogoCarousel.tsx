@@ -50,7 +50,7 @@ export function LogoCarousel({
     speed: 2000,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     adaptiveHeight: true,

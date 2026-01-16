@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { TestimonialCard } from "./TestimonialCard";
-import { Button } from "./Button";
+import { Button } from "../../shared-components/Button";
 
 const testimonialData = [
   {

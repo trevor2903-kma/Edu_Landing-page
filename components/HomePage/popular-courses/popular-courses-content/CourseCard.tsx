@@ -1,7 +1,7 @@
 import React from "react";
 import { CourseBadge } from "./CoursesBadge";
 import { CourseMetadata } from "./CourseMetaData";
-import { ArrowIcon } from "@/components/course/ArrowIcon";
+import { ArrowIcon } from "@/components/HomePage/progamme-description/ArrowIcon";
 
 interface CourseCardProps {
   badgeType: "career" | "skill" | "course" | "sci" | "project";
@@ -25,7 +25,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
   duration,
 }) => {
   return (
-    <article className="box-border min-h-[437.2px] flex flex-col items-start p-4 h-full w-full bg-white rounded-2xl border border-gray-200 border-solid shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+    <article className="box-border min-h-[437.2px] flex flex-col items-start p-4 h-full w-full bg-white rounded-2xl border border-gray-200 border-solid shadow-md cursor-pointer hover:shadow-lg transition-all duration-300 group">
       <div className="flex flex-col gap-4 items-start self-stretch w-full flex-grow">
         <div className="flex flex-wrap gap-2 content-start items-start self-stretch">
           <div className="flex flex-col gap-2 items-start flex-[1_0_0]">
@@ -41,7 +41,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
               {title}
             </h2>
             <div className="flex flex-col shrink-0 items-start pt-1">
-              <ArrowIcon className="-rotate-45" />
+              <ArrowIcon className="-rotate-45 group-hover:-translate-y-2" />
             </div>
           </div>
 

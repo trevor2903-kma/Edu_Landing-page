@@ -1,6 +1,6 @@
 import CoursesHeader from "./popular-courses-header/CourseHeader";
 import CourseGrid from "./popular-courses-content/CourseGrid";
-import { Button } from "../experts-profile/Button";
+import { Button } from "../../shared-components/Button";
 
 export default function PopularCourses() {
   return (

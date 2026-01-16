@@ -1,7 +1,7 @@
 import * as React from "react";
 import { UniversityPartners } from "./UniversityPartners";
 import { TechPartners } from "./TechPartners";
-import { BackGroundGrid } from "../course/BackGroundGrid";
+import { BackGroundGrid } from "../progamme-description/BackGroundGrid";
 
 export function PartnersSection() {
   return (

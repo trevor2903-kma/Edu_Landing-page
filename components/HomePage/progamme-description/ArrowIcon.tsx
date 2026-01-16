@@ -12,7 +12,7 @@ export const ArrowIcon: React.FC<ArrowIconProps> = ({ className }) => {
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`arrow-icon ${className}`}
+      className={`arrow-icon ${className} group-hover:translate-x-2 transition-transform duration-300`}
       style={{ position: "relative", width: "20px", height: "20px", flexShrink: 0 }}
     >
       <path

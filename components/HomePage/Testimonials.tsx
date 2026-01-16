@@ -104,7 +104,6 @@ export default function Testimonials() {
           </Slider>
         </div>
 
-        {/* Custom Navigation Arrows Below Slider */}
         <div className="flex justify-end gap-4 px-4 mt-4">
           <button
             onClick={() => sliderRef.current?.slickPrev()}

@@ -8,7 +8,7 @@ export default function AuthButtons({ className }: AuthButtonsProps) {
   return (
     <>
       <Link
-        href="#"
+        href="/login"
         className="text-base font-semibold leading-6 text-gray-700 hover:text-gray-900 whitespace-nowrap transition-colors duration-150 ease-in-out"
       >
         Đăng nhập
