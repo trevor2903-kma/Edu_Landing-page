@@ -1,8 +1,10 @@
+import { SparkleSvg } from "../shared-components/SparkleSvg";
+
 const SelfPracticeVisual = () => (
   <div className="relative h-full w-full flex items-center justify-center">
     {/* Background Shapes Container */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100%] w-[100%] max-h-[380px] max-w-[380px] z-[1] pointer-events-none opacity-80">
-      <div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
+      <div className="absolute -top-[15px] left-0 h-[calc(90%+10px)] w-[calc(90%+10px)] flex items-center justify-center">
         <svg
           viewBox="0 0 437 534"
           fill="none"
@@ -16,7 +18,7 @@ const SelfPracticeVisual = () => (
           ></path>{" "}
         </svg>
       </div>
-      <div className="absolute top-[20%] -left-[10%] h-[80%] w-[80%] flex items-center justify-center">
+      <div className="absolute top-[calc(30%-50px)] -left-[10%] h-[80%] w-[80%] flex items-center justify-center">
         <svg
           viewBox="0 0 330 374"
           fill="none"
@@ -33,10 +35,11 @@ const SelfPracticeVisual = () => (
     </div>
 
     {/* Sparkle Icon */}
-    <div className="absolute right-0 top-8 z-[20] hidden h-14 w-14 md:block">
+    <div className="absolute left-[calc(70%-10px)] -top-[40px] z-[20] hidden h-12 w-12 md:block">
       <svg viewBox="0 0 84 84" fill="none" className="h-full w-full">
         <circle cx="42" cy="42" r="42" fill="#0C9AEB" />
       </svg>
+      <SparkleSvg className="absolute top-[8px] left-[7px] h-8 w-8" />
     </div>
 
     {/* Checkmark Image */}
@@ -44,7 +47,7 @@ const SelfPracticeVisual = () => (
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/b1715b19acc5c8ecf188603a0cb3a5862f659ccf?width=1084"
         alt="Correct checkmark illustration"
-        className="max-h-full max-w-full object-contain shadow-2xl rounded-lg"
+        className="max-h-full max-w-full object-contain shadow-2xl rounded-md"
       />
     </div>
   </div>

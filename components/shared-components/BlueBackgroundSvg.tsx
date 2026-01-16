@@ -1,0 +1,23 @@
+interface BlueBackgroundSvgProps {
+    className?: string;
+}
+
+export default function BlueBackgroundSvg({ className = "" }: BlueBackgroundSvgProps) {
+  return (
+    <div className={`${className}`}>
+      <svg
+        width="310"
+        height="374"
+        viewBox="0 0 310 374"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+      >
+        <path
+          d="M268.975 83.0971C262.167 43.3967 258.762 23.5465 244.798 11.7732C230.834 0 210.694 0 170.414 0H100C52.8596 0 29.2893 0 14.6447 14.6447C0 29.2893 0 52.8595 0 100V255.947C0 310.747 0 338.147 17.6824 353.125C35.3647 368.104 62.3917 363.598 116.446 354.585L210.903 338.837C257.599 331.051 280.947 327.159 292.984 310.222C305.021 293.285 301.021 269.955 293.019 223.296L268.975 83.0971Z"
+          fill="#0072BC"
+        />
+      </svg>
+    </div>
+  );
+}
