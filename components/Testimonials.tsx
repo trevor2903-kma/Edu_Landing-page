@@ -42,30 +42,33 @@ const testimonials = [
 
 export default function Testimonials() {
   const sliderRef = React.useRef<Slider>(null);
+  const [slidesToShow, setSlidesToShow] = React.useState(3);
+  
+    React.useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth < 640) {
+          setSlidesToShow(1);
+        } else if (window.innerWidth < 720) {
+          setSlidesToShow(1);
+        } else if (window.innerWidth < 1168) {
+          setSlidesToShow(2);
+        } else {
+          setSlidesToShow(3);
+        }
+      };
+  
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
-    arrows: false, // Disable default/internal arrows
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    arrows: false,
   };
 
   return (

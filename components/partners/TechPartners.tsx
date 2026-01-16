@@ -34,7 +34,7 @@ export function TechPartners() {
         </h2>
       </header>
       <div className="mt-6 w-full max-md:max-w-full">
-        <LogoCarousel logos={techLogos} dots={false} />
+        <LogoCarousel logos={techLogos} dots={false}  />
       </div>
     </section>
   );

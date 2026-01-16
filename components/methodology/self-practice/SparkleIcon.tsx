@@ -15,7 +15,7 @@ export function SparkleIcon() {
           <circle cx="42" cy="42" r="42" fill="#0C9AEB" />
         </svg>
       </div>
-      <div className="absolute left-[21px] top-[21px] w-[42px] h-[42px] max-sm:left-[6px] max-sm:top-[8px] md:left-[20px] md:top-[20px]">
+      <div className="absolute lg:left-[15px] lg:top-[18px] lg:w-[51px] lg:h-[51px] max-sm:left-[6px] max-sm:top-[8px] md:w-14 md:h-14 md:left-[15px] md:top-[15px]">
         <svg
           width="42"
           height="42"
