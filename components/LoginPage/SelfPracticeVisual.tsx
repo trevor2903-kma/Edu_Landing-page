@@ -1,3 +1,4 @@
+import { TriangleDecorations } from "../HomePage/methodology/project-based/DecorationIcons";
 import { SparkleSvg } from "../shared-components/SparkleSvg";
 
 const SelfPracticeVisual = () => (
@@ -34,12 +35,24 @@ const SelfPracticeVisual = () => (
       </div>
     </div>
 
+    <TriangleDecorations
+          top="top-[75px]"
+          right=""
+          left="left-[calc(20%-20px)]"
+          bottom=""
+          width="w-1.5"
+          height="h-1.5"
+          gap="gap-1"
+          className="z-[3]"
+          color="#FFFFFF"
+        />
+
     {/* Sparkle Icon */}
     <div className="absolute left-[calc(70%-10px)] -top-[40px] z-[20] hidden h-12 w-12 md:block">
       <svg viewBox="0 0 84 84" fill="none" className="h-full w-full">
         <circle cx="42" cy="42" r="42" fill="#0C9AEB" />
       </svg>
-      <SparkleSvg className="absolute top-[8px] left-[7px] h-8 w-8" />
+      <SparkleSvg className="absolute top-[10px] left-[9px] h-7 w-7" />
     </div>
 
     {/* Checkmark Image */}
@@ -47,7 +60,7 @@ const SelfPracticeVisual = () => (
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/b1715b19acc5c8ecf188603a0cb3a5862f659ccf?width=1084"
         alt="Correct checkmark illustration"
-        className="max-h-full max-w-full object-contain shadow-2xl rounded-md"
+        className="max-h-full max-w-full object-contain shadow-2xl rounded-sm"
       />
     </div>
   </div>

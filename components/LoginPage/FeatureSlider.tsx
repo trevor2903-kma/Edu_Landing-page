@@ -41,30 +41,48 @@ export default function FeatureSlider() {
   return (
     <div className="hidden w-1/2 flex-col items-center justify-center bg-[#065286] text-white lg:flex relative overflow-hidden">
       {/* Content Container */}
-      <div className="relative z-10 flex h-[620px] w-full max-w-[600px] flex-col items-center px-6 text-center transition-all duration-300">
-        {/* Visual Area - Swapped to flex-1 to auto-fill available height */}
-        <div className="flex-1 w-full flex items-center justify-center min-h-0">
-          {slides[currentSlide].visual}
-        </div>
-
-        {/* Feature Info - Fixed at bottom of the visual */}
-        <div className="flex shrink-0 flex-col items-start gap-4 text-left w-full mt-6">
-          <h2 className="text-xl font-semibold leading-8">
-            {slides[currentSlide].title}
-          </h2>
-          <div className="flex flex-col gap-3">
-            {slides[currentSlide].items.map((item, idx) => (
-              <div key={idx} className="flex items-top gap-3">
-                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/80 p-0.5 text-white">
-                  <Check size={12} strokeWidth={3} />
+      <div className="relative z-10 flex h-[620px] w-full max-w-[600px] flex-col items-center px-6 text-center">
+        {/* Viewport for Slides */}
+        <div className="relative flex-1 w-full overflow-hidden pt-12">
+          {/* Sliding Track */}
+          <div
+            className="flex h-full w-full transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {slides.map((slide, idx) => (
+              <div
+                key={idx}
+                className="flex min-w-full h-full flex-col items-center"
+              >
+                {/* Visual Area */}
+                <div className="flex-1 w-full flex items-center justify-center min-h-0">
+                  {slide.visual}
                 </div>
-                <span className="text-base font-normal opacity-90">{item}</span>
+
+                {/* Feature Info */}
+                <div className="flex shrink-0 flex-col items-start gap-4 text-left w-full mt-6">
+                  <h2 className="text-lg font-semibold leading-8">
+                    {slide.title}
+                  </h2>
+                  <div className="flex flex-col gap-3">
+                    {slide.items.map((item, i) => (
+                      <div key={i} className="flex items-top gap-3">
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/80 p-0.5 text-white">
+                          <Check size={12} strokeWidth={3} />
+                        </div>
+                        <span className="text-base font-normal opacity-90">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Pagination / Carousel Controls - Fixed at bottom */}
+        {/* Pagination / Carousel Controls */}
         <div className="flex shrink-0 items-center gap-8 mt-8 pb-4">
           <button
             onClick={prevSlide}
