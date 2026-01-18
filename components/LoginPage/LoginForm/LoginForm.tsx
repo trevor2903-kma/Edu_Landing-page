@@ -2,19 +2,42 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Eye, EyeOff } from "lucide-react";
 import Logo from "@/components/header/Logo";
+import EmailInput from "./EmailInput";
+import PasswordInput from "./PasswordInput";
 
 export default function LoginForm() {
-  const [showPassword, setShowPassword] = useState(false);
   const [greeting, setGreeting] = useState("Chào buổi sáng");
 
+  // Form State
+  
   useEffect(() => {
     const hours = new Date().getHours();
     if (hours >= 5 && hours < 12) setGreeting("Chào buổi sáng");
     else if (hours >= 12 && hours < 18) setGreeting("Chào buổi chiều");
     else setGreeting("Chào buổi tối");
   }, []);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Validation State
+  const [touchedEmail, setTouchedEmail] = useState(false);
+  const [touchedPassword, setTouchedPassword] = useState(false);
+  
+  // Validation Logic
+  const emailError = touchedEmail && email.trim() === "";
+  const passwordError = touchedPassword && password.trim() === "";
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setTouchedEmail(true);
+    setTouchedPassword(true);
+    if (!emailError && !passwordError && email && password) {
+      // Handle login logic
+      console.log("Login with:", email, password);
+    }
+  };
 
   return (
     <div className="flex w-full flex-col items-center justify-center px-8 lg:w-1/2">
@@ -41,47 +64,22 @@ export default function LoginForm() {
         </div>
 
         {/* Form */}
-        <form className="flex w-full flex-col gap-5">
+        <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5">
           {/* Email Input */}
-          <div className="flex flex-col gap-1.5">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-[#344054]"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="ten@email.com"
-              className="h-11 w-full rounded-lg border border-[#D0D5DD] px-3.5 py-2.5 text-[#101828] shadow-sm outline-none placeholder:text-[#667085] focus:border-[#0072BC] focus:ring-1 focus:ring-[#0072BC]"
-            />
-          </div>
+          <EmailInput
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={() => setTouchedEmail(true)}
+            isError={emailError}
+          />
 
           {/* Password Input */}
-          <div className="flex flex-col gap-1.5">
-            <label
-              htmlFor="password"
-              className="text-sm font-medium text-[#344054]"
-            >
-              Mật khẩu
-            </label>
-            <div className="relative">
-              <input
-                id="password"
-                type={showPassword ? "text" : "password"}
-                placeholder="Điền mật khẩu"
-                className="h-11 w-full rounded-lg border border-[#D0D5DD] px-3.5 py-2.5 text-[#101828] shadow-sm outline-none placeholder:text-[#667085] focus:border-[#0072BC] focus:ring-1 focus:ring-[#0072BC]"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#98A2B3] hover:text-[#475467]"
-              >
-                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-              </button>
-            </div>
-          </div>
+          <PasswordInput
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onBlur={() => setTouchedPassword(true)}
+            isError={passwordError}
+          />
 
           {/* Remember Me & Forgot Password */}
           <div className="flex items-center justify-between">

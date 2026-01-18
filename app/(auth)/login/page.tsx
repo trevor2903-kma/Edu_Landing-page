@@ -1,6 +1,6 @@
 "use client";
 
-import LoginForm from "@/components/LoginPage/LoginForm";
+import LoginForm from "@/components/LoginPage/LoginForm/LoginForm";
 import FeatureSlider from "@/components/LoginPage/FeatureSlider";
 
 export default function LoginPage() {
