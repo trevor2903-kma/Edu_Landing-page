@@ -16,7 +16,8 @@ export function InputDesign() {
         width="w-2.5"
         height="h-2.5"
         gap="gap-1"
-        className="sm:top-[calc(40%+10px)] sm:-left-[10px]"
+        className="sm:top-[calc(40%+10px)] sm:-left-[10px] max-sm:h-1 max-sm:w-1 max-sm:gap-[4px] max-sm:left-[15px] max-sm:top-[45px] max-sm:z-10 max-sm:color-[#C9A9CB]"
+        color="#0072BC"
       />
 
       <img

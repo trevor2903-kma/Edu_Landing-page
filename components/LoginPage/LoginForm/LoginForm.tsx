@@ -6,11 +6,16 @@ import Logo from "@/components/header/Logo";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
 
+const MOCK_USER = {
+  email: "admin@gmail.com",
+  password: "123456",
+};
+
 export default function LoginForm() {
   const [greeting, setGreeting] = useState("Chào buổi sáng");
 
   // Form State
-  
+
   useEffect(() => {
     const hours = new Date().getHours();
     if (hours >= 5 && hours < 12) setGreeting("Chào buổi sáng");
@@ -20,22 +25,55 @@ export default function LoginForm() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState<string | null>(null);
 
   // Validation State
   const [touchedEmail, setTouchedEmail] = useState(false);
   const [touchedPassword, setTouchedPassword] = useState(false);
-  
+
   // Validation Logic
-  const emailError = touchedEmail && email.trim() === "";
-  const passwordError = touchedPassword && password.trim() === "";
+  const emailEmpty = email.trim() === "";
+  const emailFormatInvalid = !email.endsWith("@gmail.com");
+
+  let emailErrorMessage = null;
+  if (touchedEmail) {
+    if (emailEmpty) {
+      emailErrorMessage = "Vui lòng điền email";
+    } else if (emailFormatInvalid) {
+      emailErrorMessage = "Email không đúng định dạng";
+    } else if (loginError) {
+      emailErrorMessage = loginError;
+    }
+  }
+
+  const passwordEmpty = password.trim() === "";
+  let passwordErrorMessage = null;
+  if (touchedPassword) {
+    if (passwordEmpty) {
+      passwordErrorMessage = "Vui lòng điền mật khẩu";
+    } else if (loginError) {
+      passwordErrorMessage = loginError;
+    }
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setTouchedEmail(true);
     setTouchedPassword(true);
-    if (!emailError && !passwordError && email && password) {
-      // Handle login logic
-      console.log("Login with:", email, password);
+    setLoginError(null);
+
+    // Check if valid (no empty, correct format)
+    const isEmailValid = !emailEmpty && !emailFormatInvalid;
+    const isPasswordValid = !passwordEmpty;
+
+    if (isEmailValid && isPasswordValid) {
+      // Mock Login Check
+      if (email === MOCK_USER.email && password === MOCK_USER.password) {
+        console.log("Login Success:", email);
+        alert("Đăng nhập thành công!");
+      } else {
+        setLoginError("Email hoặc mật khẩu không chính xác");
+      }
     }
   };
 
@@ -68,17 +106,23 @@ export default function LoginForm() {
           {/* Email Input */}
           <EmailInput
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setLoginError(null);
+            }}
             onBlur={() => setTouchedEmail(true)}
-            isError={emailError}
+            errorMessage={emailErrorMessage}
           />
 
           {/* Password Input */}
           <PasswordInput
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setLoginError(null);
+            }}
             onBlur={() => setTouchedPassword(true)}
-            isError={passwordError}
+            errorMessage={passwordErrorMessage}
           />
 
           {/* Remember Me & Forgot Password */}

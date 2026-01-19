@@ -5,16 +5,17 @@ interface PasswordInputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur: () => void;
-  isError: boolean;
+  errorMessage?: string | null;
 }
 
 export default function PasswordInput({
   value,
   onChange,
   onBlur,
-  isError,
+  errorMessage,
 }: PasswordInputProps) {
   const [showPassword, setShowPassword] = useState(false);
+  const hasError = !!errorMessage;
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -30,13 +31,13 @@ export default function PasswordInput({
           onBlur={onBlur}
           placeholder="Điền mật khẩu"
           className={`h-11 w-full rounded-lg border px-3.5 py-2.5 text-[#101828] shadow-sm outline-none placeholder:text-[#667085] focus:ring-1 ${
-            isError
+            hasError
               ? "border-[#FDA29B] focus:border-[#FDA29B] focus:ring-[#FDA29B]"
               : "border-[#D0D5DD] focus:border-[#0072BC] focus:ring-[#0072BC]"
           }`}
         />
         {/* Show Error Icon if Error, otherwise show Toggle Logic */}
-        {isError ? (
+        {hasError ? (
           <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#F04438]">
             <AlertCircle size={20} />
           </div>
@@ -50,9 +51,7 @@ export default function PasswordInput({
           </button>
         )}
       </div>
-      {isError && (
-        <p className="text-sm text-[#D92D20]">Vui lòng điền mật khẩu</p>
-      )}
+      {hasError && <p className="text-sm text-[#D92D20]">{errorMessage}</p>}
     </div>
   );
 }
